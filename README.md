@@ -12,4 +12,4 @@ results are stored in a .csv file in the [data](/data) folder.
 All the other python files contain supplementary functions that are necessary in order to successfully conduct the main 
 experiment. The [qaoa_opt.py](/qaoa_opt.py) contains the code for the implementation of a QAOA procedure and the 
 [create_plt.py](/create_plt.py) is used in order to create the plots that derive from the data we took from the 
-experiments. 
+experiments. The plots are stored in the [plots](/plots) folder. 
