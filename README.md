@@ -1,4 +1,4 @@
-# Move to a new eigenspace with QAOA
+# Moving to a new eigenspace with QAOA
 
 Python files that contain the necessary functions in order to find the minimum number of layers needed to produce a state (from an 
 optimisation procedure like Quantum Approximate Optimisation Algorithm) that will completely belong to an eigenspace different 
