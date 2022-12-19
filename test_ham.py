@@ -94,5 +94,3 @@ for t in range(test_times):
     res_init_ls.append(res.x)
     fun_init_ls.append(res.fun)
     print(res.fun)
-
-res_init = res_init_ls[np.argmin(fun_init_ls)]

@@ -167,14 +167,3 @@ def projectors(group, qubits):
                 dict_c[eigvals_r[i]] += np.outer(vec, vec.conj())
 
     return dict_c
-
-# Change of basis for 2^3 qubits
-#s = 1 / np.sqrt(2)
-#U = np.array([[1,0,0,0,0,0,0,0],
-#              [0,s,0,0,0,0,s,0],
-#              [0,0,1,0,0,0,0,0],
-#              [0,0,0,s,0,0,0,s],
-#              [0,s,0,0,0,0,-s,0],
-#              [0,0,0,0,1,0,0,0],
-#              [0,0,0,s,0,0,0,-s],
-#              [0,0,0,0,0,1,0,0]])
