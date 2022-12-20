@@ -15,8 +15,8 @@ def heisenberg_hamiltonian(n_qubits, jx, jy, jz, periodic=True):
     Args:
         n_qubits (int): Number of qubits.
         jx (float): Strength in X-direction.
-        jy (float): Strength in Y-direction
-        jz (float): Strength in Z-direction
+        jy (float): Strength in Y-direction.
+        jz (float): Strength in Z-direction.
         periodic (bool): Periodic boundary conditions or not.
     '''
     
@@ -107,6 +107,16 @@ def init_bra(qubits, mix_ham):
 	return init
 	
 def break_pb(n_qubits, jx, jy, jz, periodic=True):
+    '''
+    Function that creates a matrix (Hamiltonian) that contains only the symmetry 
+    breaking term.
+    
+    Args: 
+        n_qubits (int): number of qubits that the Hamiltonian acts on.
+        jx (float): Strength in X-direction.
+        jy (float): Strength in Y-direction.
+        jz (float): Strength in Z-direction.
+    '''
     hamiltonian = QubitOperator()
     bpb = QubitOperator()
     if periodic:
