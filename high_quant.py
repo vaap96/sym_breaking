@@ -25,6 +25,7 @@ ham_bpb = of.get_sparse_operator(ham_rep.break_pb(nq, jx, jy, jz)).toarray()
 ham_ob = of.get_sparse_operator(ham_rep.heisenberg_hamiltonian(nq, jx, jy, jz, periodic = False)).toarray()
 ham_mix = of.get_sparse_operator(ham_rep.mix_pauli('Z', nq)).toarray()
 
+# Procedure to break the degeneracy of the Hamiltonian for a specific case.
 if nq == 3 and jx > 0:
 	pauli_x = np.array([[0,1],[1,0]])    
 	pauli_z = np.array([[1,0],[0,-1]]) 
