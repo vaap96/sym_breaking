@@ -109,10 +109,10 @@ def max_quant(params, ham_ev, layers, init_state, mix_ham, qubits):
         proj_fidel.append(psi.transpose().conj() @ proj @ psi)
         quantities.append(psi.transpose().conj() @ proj @ psi)
 
-    obj = proj_fidel[3]
+    obj = proj_fidel[0]
     obj_val.append(obj)
 
-    return obj
+    return -obj
 
 # Procedure to find the local optimum parameters in order to use them as the 
 # initial parameters in the QAOA procedure.
@@ -171,7 +171,7 @@ for i in p:
 
 best_proj = []
 for lay in p:
-    best_proj.append(quant_dict[lay]['pr'][np.argmin(quant_dict[lay]['obj'])])
+    best_proj.append(quant_dict[lay]['pr'][np.argmax(quant_dict[lay]['obj'])])
 
 def projectors_best_fidel(best_proj):
     '''
@@ -201,4 +201,4 @@ proj_plt = projectors_best_fidel(best_proj)
 # Save the necessary data that was produced from the optimisation procedure in 
 # a .csv file.
 df = pd.DataFrame(proj_plt)
-df.to_csv(f"data/{nq}q_proj_{sys.argv[1]}.csv", index=False)
+df.to_csv(f"data/{nq}q_proj_max.csv", index=False)
