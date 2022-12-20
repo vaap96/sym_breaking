@@ -6,8 +6,8 @@ import group_rep
 import numpy as np
 import proj
 
-opt_type = sys.argv[1]
-nq = int(sys.argv[2])
+opt_type = 'max'
+nq = 4
 p = [i for i in range(9)]
 
 # Define Groups and Projectors
